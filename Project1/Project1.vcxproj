@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cheto_tam.cpp" />
     <ClCompile Include="example.cpp" />
     <ClCompile Include="ffff.cpp" />
     <ClCompile Include="func.cpp" />
