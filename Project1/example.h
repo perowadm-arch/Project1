@@ -3,6 +3,6 @@ class example
 {
 public:
 	example();
-
 };
+void f();
 

@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="example.cpp" />
     <ClCompile Include="ffff.cpp" />
+    <ClCompile Include="func.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="example.h" />
