@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include "example.h"
 //2222222222
 
@@ -14,7 +14,7 @@ int main() {
 
 	//ідентифікатор - ім'я. не може починатись з цифри.
 
-	int /*min*/; //ctrl+c - comment виділеного слова
+	int min; //ctrl+c - comment виділеного слова
 	int Min;
 	int _min;
 	//int 2k;
@@ -63,4 +63,4 @@ int main() {
 	std::cout << "sizeof= " << sizeof(&p) << std::endl; // sizeof(&змінна) - розмір адреси змінної
 	std::cout << "p- " << sizeof(p) << std::endl; // - розмір змінної
 	return 0;
-}; 
+}; */
