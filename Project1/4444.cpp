@@ -62,9 +62,9 @@ int main() {
 
 	const double E = 0.0001;
 	const double hx = 0.5;
-	double a = 4;
+	double a = 4;  //можна створити лічильники в одному рядку, але тільки коли вони одного типу
 	const double ha = 1.5;
-	for (double x = -2.0; x < 2 + E; x += hx) {
+	for (double x = -2.0 /*a = 4*/; x < 2 + E; x += hx) {
 
 		double y = exp(a) / pow(a, x);
 		cout <<"a = " <<a<< "\tx = " <<x<< "\ty = " <<y<< "\n";
