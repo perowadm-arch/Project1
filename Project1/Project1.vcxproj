@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="33333.cpp" />
+    <ClCompile Include="4444.cpp" />
     <ClCompile Include="cheto_tam.cpp" />
     <ClCompile Include="example.cpp" />
     <ClCompile Include="ffff.cpp" />

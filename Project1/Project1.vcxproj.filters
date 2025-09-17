@@ -30,6 +30,9 @@
     <ClCompile Include="33333.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="4444.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="example.h">
