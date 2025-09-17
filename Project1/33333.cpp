@@ -1,5 +1,7 @@
 #include <iostream>
 //#include <stdio.h>
+#include <math.h>
+using namespace std;
 
 /* int main() {
 
@@ -26,10 +28,9 @@
 	//printf( format: "%d\n", c); із мови С. перший покаже символами, другий числом.
 
 	//int8 - char; int16 - short; int64 - long long; int32 - long;
-return 0;
 }; */
 
-int main() {
+/*int main() {
 
 	int a = 3;
 	int b = 4;
@@ -47,11 +48,53 @@ else {
 	std::cout << c << std::endl;
 
 	int d = a & b;
-	//3 - 0101; 4 - 0110;
-	//1*2^0 + 0*2^1 + 1*2^2 + 0*2^3 = 3. формула переведення з двоїчного коду.
+	//3 - 0110; 4 - 0101;
+	//0*2^0 + 1*2^1 + 1*2^2 + 0*2^3 = 3. формула переведення з двоїчного коду.
 	//сумма a*p^n де а - значення з кінця (1 чи 0),
 	// р - тип (в нас двоїчний, отже 2), n - номер позиції, рахуємо від нуля.
 	std::cout << d << std::endl;
+
+	int e = a | b; //операція або. якщо ||, то результат 1 або 0.
+
+	std::cout << e << std::endl;
+
+	unsigned int f = 10;
+
+	int g = f >> 1;  //зсув вправо, також швидке ділення на 2 (якщо 1), якщо 2 - швидке ділення без остачі.
+	std::cout << g << std::endl;
+
+	int h = 4;
+	int i = 5;
+
+	if (h == i) {
+		std::cout << h << i << std::endl;
+		std::cout << h << i << std::endl;
+	};
+	};*/
+
+int main() {
+	//cout << 1.0 / 2 << endl; //якщо писати цілі числа, то і результат дійсний
+	//якщо ж одне з них зробити дійсним - рез збільшується до дійсного
+
+	double x, a;
+	cout << "enter number a: ";
+	cin >> a;
+	cout << "enter number x: ";
+	cin >> x;
+
+	double y; 
+	if (a > 0 && x > 0) {
+
+		y = exp(pow(x, a));
+
+	}
+	else {
+
+		y = pow(x, exp(a));
+
+	};
+	 
+	cout << "y =" << y << endl;
 
 	return 0;
 };
