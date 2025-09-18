@@ -54,15 +54,21 @@ int main() {
 	//mas[i] - поточний елемент масиву
 
 	int min = mas[0];
+	int max = mas[0];
 
-	for (int i = 1; i < n; ++i) {
+	for (int i = 0; i < n; ++i) {
 		if (mas[i] < min) {
 			min = mas[i];
-		};
+		}
+
+		if (mas[i] > max) {
+			max = mas[i];
+		}
 	
 	};
 
 	cout << "min = " << min << endl;
+	cout << "max = " << max << endl;
 
 	//в непарному числі вкінці двійкового запису буде 1 
 	//в парному 0
