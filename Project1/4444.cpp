@@ -66,9 +66,11 @@ int main() {
 	const double ha = 1.5;
 	for (double x = -2.0 /*a = 4*/; x < 2 + E; x += hx) {
 
-		double y = exp(a) / pow(a, x);
-		cout <<"a = " <<a<< "\tx = " <<x<< "\ty = " <<y<< "\n";
-		a += hx;
+		for (double a = 4; a < 10 + E; a += ha) {
+
+			double y = exp(a) / pow(a, x);
+			cout << "a = " << a << "\tx = " << x << "\ty = " << y << "\n";
+		}
 	}
 
 
