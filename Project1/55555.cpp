@@ -31,12 +31,11 @@ int main() {
 	cout << mas[3] << endl;
 	cout << mas[4] << endl;*/
 
-	const int n = 5;
+	const int n = 50;
 	int mas[n];
 	for (int i = 0; i < n; ++i) {
-
-		cout << "enter number - " << i << ": ";
-		cin >> mas[i];    //mas[i] = i*i;
+		mas[i] = rand()%100;  //випадкове ціле число, % - ділення по модулю
+	  //число буде від нуля до 99
 	}
 
 	for (int i = 0; i < n; ++i) {
