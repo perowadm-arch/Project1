@@ -31,7 +31,7 @@ int main() {
 	cout << mas[3] << endl;
 	cout << mas[4] << endl;*/
 
-	const int n = 10;
+	const int n = 20;
 	int mas[n];
 
 	//unsigned int seed = time(NULL);
@@ -40,7 +40,7 @@ int main() {
 	
 
 	for (int i = 0; i < n; ++i) {
-		mas[i] = rand()%10;  //випадкове ціле число, % - ділення по модулю
+		mas[i] = rand()%21 - 10;  //випадкове ціле число, % - ділення по модулю
 //число буде від нуля до 99
 //2 - додати ще від'ємні числа (%201 - 100) від -100 до 100
 
@@ -52,15 +52,18 @@ int main() {
 	};
 
 	cout << endl;
-	int par = 0;
+	int neg = 0;
 
 	for (int i = 0; i < n; ++i) {
-		if (mas[i] % 2 == 0) {
-			++par;
+		if (mas[i] <0) {
+			++neg;
 		};
 
 	};
-	cout << "par = " << par << endl;
+	cout << "negative = " << neg << endl;
+
+	//в непарному числі вкінці двійкового запису буде 1 
+	//в парному 0
 
 
 	return 0;
