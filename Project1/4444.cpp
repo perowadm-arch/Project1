@@ -3,7 +3,7 @@
 #include <stdlib.h>
 using namespace std;
 
-int main() {
+//int main() {
 
 	/*int a = 5;
 	int b = 7;
@@ -92,7 +92,7 @@ int main() {
 
 	//sin^x(x)
 
-	double x, y;
+	/*double x, y;
 	char ch;
 
 	do {
@@ -103,6 +103,5 @@ int main() {
 		cout << "continue (y/n)?";
 		cin >> ch;
 	} while (ch == 'y' || ch == 'Y'); //один символ береться в ''; рядок - в ""
-
-     return 0;
-};
+	*/
+//return 0; };
