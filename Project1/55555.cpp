@@ -34,11 +34,13 @@ int main() {
 	const int n = 10;
 	int mas[n];
 
-	unsigned int seed = time(NULL);
-	srand(seed); //внатуре рандом цифры
+	//unsigned int seed = time(NULL);
+	//srand(seed); //внатуре рандом цифры
+
+	
 
 	for (int i = 0; i < n; ++i) {
-		mas[i] = rand()%100;  //випадкове ціле число, % - ділення по модулю
+		mas[i] = rand()%10;  //випадкове ціле число, % - ділення по модулю
 //число буде від нуля до 99
 //2 - додати ще від'ємні числа (%201 - 100) від -100 до 100
 
@@ -49,7 +51,13 @@ int main() {
 		cout<<mas[i]<< "  ";
 	}
 
+	cout << endl;
+	int s = 0;
 
+	for (int i = 0; i < n; ++i) {
+		s += mas[i];
+	}
+	cout << "sum = " << s << endl;
 
 
 	return 0;
