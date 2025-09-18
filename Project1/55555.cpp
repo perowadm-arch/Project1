@@ -55,7 +55,7 @@ int main() {
 	int neg = 0;
 
 	for (int i = 0; i < n; ++i) {
-		if (mas[i] <0) {
+		if (mas[i] >0 && mas[i] %2 == 0) {
 			++neg;
 		};
 
