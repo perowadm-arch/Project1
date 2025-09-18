@@ -73,10 +73,12 @@ int main() {
 		}
 	}*/
 
-	const double E = 0.005;
+	/*const double E = 0.005;
 	double x = 1;
 	double s = 0;
-	while (1.0 / x > E) {
+	while (1.0 / x > E) { 
+		//замість вайл ми можемо написати фор і залишити перший і останній блок пустими
+		//так операція буде виконуватись одна й та сама
 
 		cout << "current sum = " << s << endl;
 		cout << "current 1/x = " << 1.0/x << endl;
@@ -86,8 +88,21 @@ int main() {
 	}
 
 	cout << "sum = " << s << endl;
-	cout << "iteration = " << x << endl;
+	cout << "iteration = " << x << endl;*/
 
+	//sin^x(x)
 
-	return 0;
+	double x, y;
+	char ch;
+
+	do {
+		cout << "input x = ";
+		cin >> x;
+		y = pow(sin(x), x);
+		cout << "result y = "<<y<<endl;
+		cout << "continue (y/n)?";
+		cin >> ch;
+	} while (ch == 'y' || ch == 'Y'); //один символ береться в ''; рядок - в ""
+
+     return 0;
 };
