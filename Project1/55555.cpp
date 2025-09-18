@@ -3,13 +3,18 @@
 using namespace std;
 
 int main() {
-	int a = 5;
-	int b = 10;
+	unsigned int a = 5;
+	unsigned int b = 10;
 	cout << a << " " << b << endl;
 
-	a = a + b; 
-	b = a - b;
-	a = a - b;
+	a = a ^ b;
+	b = a ^ b;
+	a = a ^ b;
+
+	//a = a + b; 
+	//b = a - b;
+	//a = a - b;
+	
 	//int c = a;
 	//a = b;
 	//b = c;
