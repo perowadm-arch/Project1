@@ -48,16 +48,19 @@ int main() {
 	}
 
 	for (int i = 0; i < n; ++i) {
-		cout<<mas[i]<< "  ";
-	}
+		cout << mas[i] << "  ";
+	};
 
 	cout << endl;
-	int s = 0;
+	int par = 0;
 
 	for (int i = 0; i < n; ++i) {
-		s += mas[i];
-	}
-	cout << "sum = " << s << endl;
+		if (mas[i] % 2 == 0) {
+			++par;
+		};
+
+	};
+	cout << "par = " << par << endl;
 
 
 	return 0;
