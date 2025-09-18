@@ -34,7 +34,9 @@ int main() {
 	const int n = 5;
 	int mas[n];
 	for (int i = 0; i < n; ++i) {
-		mas[i] = i*i;
+
+		cout << "enter number - " << i << ": ";
+		cin >> mas[i];    //mas[i] = i*i;
 	}
 
 	for (int i = 0; i < n; ++i) {
