@@ -31,16 +31,25 @@ int main() {
 	cout << mas[3] << endl;
 	cout << mas[4] << endl;*/
 
-	const int n = 50;
+	const int n = 10;
 	int mas[n];
+
+	unsigned int seed = time(NULL);
+	srand(seed); //внатуре рандом цифры
+
 	for (int i = 0; i < n; ++i) {
 		mas[i] = rand()%100;  //випадкове ціле число, % - ділення по модулю
-	  //число буде від нуля до 99
+//число буде від нуля до 99
+//2 - додати ще від'ємні числа (%201 - 100) від -100 до 100
+
+		
 	}
 
 	for (int i = 0; i < n; ++i) {
 		cout<<mas[i]<< "  ";
 	}
+
+
 
 
 	return 0;
