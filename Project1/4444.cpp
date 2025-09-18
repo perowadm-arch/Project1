@@ -60,19 +60,33 @@ int main() {
 	cout << "x = " << x << endl;
 	cout << "y = " << y << endl;*/
 
-	const double E = 0.0001;
+	/*const double E = 0.0001;
 	const double hx = 0.5;
 	double a = 4;  //можна створити лічильники в одному рядку, але тільки коли вони одного типу
 	const double ha = 1.5;
-	for (double x = -2.0 /*a = 4*/; x < 2 + E; x += hx) {
+	for (double x = -2.0; x < 2 + E; x += hx) {
 
 		for (double a = 4; a < 10 + E; a += ha) {
 
 			double y = exp(a) / pow(a, x);
 			cout << "a = " << a << "\tx = " << x << "\ty = " << y << "\n";
 		}
+	}*/
+
+	const double E = 0.005;
+	double x = 1;
+	double s = 0;
+	while (1.0 / x > E) {
+
+		cout << "current sum = " << s << endl;
+		cout << "current 1/x = " << 1.0/x << endl;
+
+		s += 1.0 / x;
+		x += 1;
 	}
 
+	cout << "sum = " << s << endl;
+	cout << "iteration = " << x << endl;
 
 
 	return 0;
