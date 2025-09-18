@@ -53,23 +53,33 @@ int main() {
 
 	//mas[i] - поточний елемент масиву
 
-	int min = mas[0];
-	int max = mas[0];
+	int imin = 0;
+	int imax = 0;     
+
+	//ми шукаємо мін і макс елемент, 
+	//потім його адресу в масиві і міняємо його
 
 	for (int i = 0; i < n; ++i) {
-		if (mas[i] < min) {
-			min = mas[i];
+		if (mas[i] < mas[imin]) {
+			imin = i;
 		}
 
-		if (mas[i] > max) {
-			max = mas[i];
+		if (mas[i] > mas[imax]) {
+			imax = i;
 		}
 	
 	};
 
-	cout << "min = " << min << endl;
-	cout << "max = " << max << endl;
+	cout << "\nmin = " << mas[imin] << endl;
+	cout << "\nindex min = " << imin << endl;
+	cout << "\nmax = " << mas[imax] << endl;
+	cout << "\nindex max = " << imax << endl;
 
+	mas[imax] = 1000;
+
+	for (int i = 0; i < n; ++i) {
+		cout << mas[i] << "  ";
+	};
 	//в непарному числі вкінці двійкового запису буде 1 
 	//в парному 0
 
