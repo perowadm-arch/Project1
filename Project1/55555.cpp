@@ -3,23 +3,36 @@
 using namespace std;
 
 int main() {
-	unsigned int a = 5;
-	unsigned int b = 10;
-	cout << a << " " << b << endl;
+	//сортуванн€ масиву бульбашки
 
-	a = a ^ b;
-	b = a ^ b;
-	a = a ^ b;
+    const int n = 10;
+    long long mas[n];
+    for (int i = 0; i < n; ++i) {
+        mas[i] = rand() % 100;
+    }
 
-	//a = a + b; 
-	//b = a - b;
-	//a = a - b;
-	
-	//int c = a;
-	//a = b;
-	//b = c;
-	cout << a << " " << b << endl;
+    
+    for (int i = 0; i < n; ++i) {
+        cout << mas[i] << " ";
+    }
 
-	// ми пом≥н€ли м≥сц€ми значенн€, використовуючи с €к пусту чашку
+    //пор≥вн€нн€ вс≥х сус≥д≥в
+
+    for (int k = 0; k < n - 1; ++k) {
+        for (int i = 0; i < n - 1; ++i) {
+            if (mas[i + 1] < mas[i]) {
+                int c = mas[i + 1];
+                mas[i + 1] = mas[i];
+                mas[i] = c;
+            }
+        }
+    }
+
+    cout << endl;
+
+    for (int i = 0; i < n; ++i) {
+        cout << mas[i] << " ";
+    }
+
 	return 0;
 };
