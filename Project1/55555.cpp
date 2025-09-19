@@ -2,7 +2,7 @@
 #include <math.h>
 using namespace std;
 
-int main() {
+/*int main() {
 	//сортування масиву бульбашки
 
     const int n = 10;
@@ -35,4 +35,4 @@ int main() {
     }
 
 	return 0;
-};
+};*/
