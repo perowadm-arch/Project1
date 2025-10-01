@@ -2,13 +2,13 @@
 #include <math.h>
 using namespace std;
 
-/*int main() {
+int main(){
 	//сортування масиву бульбашки
 
     const int n = 10;
     long long mas[n];
     for (int i = 0; i < n; ++i) {
-        mas[i] = rand() % 100;
+        mas[i] = rand() % 100 -50;
     }
 
     
@@ -18,14 +18,23 @@ using namespace std;
 
     //порівняння всіх сусідів
 
-    for (int k = 0; k < n - 1; ++k) {
+    bool isSorted = false;
+    int k = 0;
+    while (!isSorted && k < n-1) {  //while not sorted yet
+        isSorted = true;
         for (int i = 0; i < n - 1; ++i) {
             if (mas[i + 1] < mas[i]) {
+                isSorted = false;
                 int c = mas[i + 1];
                 mas[i + 1] = mas[i];
                 mas[i] = c;
             }
+          }
         }
+        ++k;
+
+    for (int k = 0; k < n - 1; ++k) {
+       
     }
 
     cout << endl;
@@ -35,4 +44,4 @@ using namespace std;
     }
 
 	return 0;
-};*/
+};
