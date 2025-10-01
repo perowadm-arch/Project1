@@ -43,5 +43,7 @@ int main(){
         cout << mas[i] << " ";
     }
 
+        cout << "k = " << k << endl;
+
 	return 0;
 };
