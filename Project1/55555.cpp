@@ -23,7 +23,7 @@ int main(){
     while (!isSorted && k < n-1) {  //while not sorted yet
         isSorted = true;
         for (int i = 0; i < n - 1; ++i) {
-            if (mas[i + 1] < mas[i]) {
+            if (abs(mas[i + 1]) < abs(mas[i]) ) {
                 isSorted = false;
                 int c = mas[i + 1];
                 mas[i + 1] = mas[i];
