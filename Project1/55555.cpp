@@ -10,7 +10,6 @@ int main(){
 	//return   - повертає результат із функції
 	//continue   - for while do while
 
-	bool isexit = false;
 
 	for (int i = 1; i < 5; i++){
 		for (int j = 1; j < 5; j++) {
@@ -22,18 +21,12 @@ int main(){
 
 				if (x %13 == 0 && x != 0) {
 					cout << "Break" << endl;
-					isexit = true;
-					break;
+					goto myexit;
 				}
 			}
-			if (isexit) {
-				break;
-			}
-		}
-		if (isexit) {
-			break;
 		}
 	}
+	myexit:
 
 	return 0;
 };
