@@ -10,12 +10,15 @@ int main(){
 	//return   - повертає результат із функції
 	//continue   - for while do while
 
-	for (int i = 1; i <= 10; i++ ) {
-		
-		if (i % 3 == 0) {
+
+	srand(time(NULL));
+	while (true) {  //нескінченний цикл 
+		int x = rand() % 100;  //генерація рандомних чисел поки не буде кратне 13
+		cout << x << " ";
+		if (x % 13 == 0 && x!=0) {
 			break;
 		}
-		cout << i << " ";
+		
 	}
 	cout << "exit" << endl;
 
