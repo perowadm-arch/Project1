@@ -10,14 +10,10 @@ int main(){
 	//return   - повертає результат із функції
 	//continue   - for while do while
 
+	goto mitkka1;
+	cout << "nnnn" << endl;
+	mitkka1:
 
-	for (int i = 1; i <= 10; i++) {
-
-		if (i % 3 == 0) {
-			continue;  //ми пропустимо один елемент і продовжимо обробляти
-		}
-		cout << i << " "; 
-	}
 	cout << "exit" << endl;
 
 	return 0;
