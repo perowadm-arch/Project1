@@ -10,33 +10,30 @@ int main(){
 	//return   - повертає результат із функції
 	//continue   - for while do while
 
-	bool err1 = false;
-	bool err2 = true;
-	bool err3 = false;
+	bool isexit = false;
 
-	cout << "processing 1" << endl;
-	if (err1) {
-		goto myend;
+	for (int i = 1; i < 5; i++){
+		for (int j = 1; j < 5; j++) {
+			for (int k = 1; k < 5; k++) {
+				int x = rand() % 100;
+
+				cout << x << endl;
+				cout << i << " " << j << " " << k << endl;
+
+				if (x %13 == 0 && x != 0) {
+					cout << "Break" << endl;
+					isexit = true;
+					break;
+				}
+			}
+			if (isexit) {
+				break;
+			}
+		}
+		if (isexit) {
+			break;
+		}
 	}
-
-	cout << "processing 2" << endl;
-	if (err2) {
-		goto myend;
-	}
-
-	cout << "processing 3" << endl;
-	if (err3) {
-		goto myend;
-	}
-
-	cout << "processing 4" << endl;
-	goto exit_program;
-
-
-myend:
-	cout << "error" << endl;
-	exit_program:
-	cout << "exit" << endl;
 
 	return 0;
 };
