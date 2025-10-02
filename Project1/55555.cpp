@@ -10,9 +10,14 @@ int main(){
 	//return   - повертає результат із функції
 	//continue   - for while do while
 
-	goto mitkka1;
+
+	int i = 0;
+mitkka1:
+	++i;
 	cout << "nnnn" << endl;
-	mitkka1:
+	if (i<10) goto mitkka1;
+
+	
 
 	cout << "exit" << endl;
 
