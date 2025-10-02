@@ -22,5 +22,12 @@ int main(){
 
 	cout << *p1 << endl;
 
+	cout << &p1 << endl;
+
+	double** pp1;
+	pp1 = &p1;
+
+	cout << pp1 << endl;
+
 	return 0;
 };
