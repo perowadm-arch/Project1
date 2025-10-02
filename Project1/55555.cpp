@@ -2,33 +2,26 @@
 #include <math.h>
 using namespace std;
 
-int main(){
-	//показчик
+int main() {
+	int mas[5] = { 10, 20, 3, 4, 5 };
 
-	//синтаксис
-	//звичайна змінна - тип назва;
-	// показчик/вказівник/поінтер - тип* назва;
-	//показчик має право зберігати інформацію, де розташований об'єкт в пам'яті
+	for (int i = 0; i < 5; i++) {
+		cout << mas[i] << " ";
+	}
 
-	double a = 2.6;
-	double* p1;
-	p1 = &a;
+	cout << mas << endl;  //мас це вже адреса елемента
+
+	int* pmas;
+	pmas = mas;
+	cout << pmas << endl;
+
+	*pmas = 111;
+
+	for (int i = 0; i < 5; i++) {
+		cout << mas[i] << " ";
+	}
+
 	
-	cout << p1 << endl;
-	cout << &a << endl;
-	cout << *p1 << endl; //взяти об'єкт за вказаною адресою
-
-	a = 5.8;
-
-	cout << *p1 << endl;
-
-	cout << &p1 << endl;
-
-	double** pp1;
-	pp1 = &p1;
-
-	cout << pp1 << endl;
-	cout << **pp1 << endl; //зірочка як шлях (від рр1 до р1, від р1 до а
 
 	return 0;
 };
