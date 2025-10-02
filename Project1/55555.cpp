@@ -28,6 +28,7 @@ int main(){
 	pp1 = &p1;
 
 	cout << pp1 << endl;
+	cout << **pp1 << endl; //зірочка як шлях (від рр1 до р1, від р1 до а
 
 	return 0;
 };
