@@ -43,6 +43,20 @@ int main() {
 	int* const p32 = mas;
 	*(p32 + 3) = 333;
 
+ 
+	//константний показчик на константу
+	//const type * const name = initialization
+	//*p2 = 77; заборонено міняти об'єкт за показчиком на константу
+	//p3 = &a; - заборонено міняти адресу константного показчика
+
+	int x = 9;
+	int y = 19;
+	int const m = 10;
+	const int* const p4 = &x;
+	const int* const p41 = &y;
+	cout << *p4 << endl;
+
+
 
 	return 0;
 };
