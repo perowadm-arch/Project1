@@ -28,6 +28,17 @@ int main() {
 
 	cout << *pmin << " " << *pmax << endl;
 
+	int c = *pmin;
+	*pmin = *pmax;
+	*pmax = c;
+	//ìè ïîì³íÿëè ìàêñèìóì ³ ì³í³ìóì ì³ñöÿìè
+
+	cout << endl;
+
+	for (int i = 0; i < n; i++) {
+		cout << mas[i] << "  " << endl;
+	}
+	cout << endl;
 
 	return 0;
 };
