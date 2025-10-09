@@ -3,29 +3,27 @@
 using namespace std;
 
 int main() {
-	//операції з адресами
-	// адреса + число = адреса. виконується відповідно до розміру типу
-	// адреса - число = адреса.
-	// адреса - адреса = число. показує зміщення між адресами
+	//посиоання reference
+	// тип & назва = ініціалізація;
+	// референс - "друге ім'я" (константний показчик)
+	// *p <==> ra
+	// const тип & назва = ініціалізація;
 
-	//адреса + адреса - не існує
+	int a = 90;
+	int& ra = a; // <==> int* const pra = &a;
+	cout << ra << endl;
+	cout << a << endl;
+	ra = 100;
+	cout << ra << endl;
+	cout << a << endl;
+	int* const pra = &a;
+	*pra = 123;
+	cout << ra << endl;
+	cout << a << endl;
+	cout << *pra << endl;
 
-	
-
-	int mas[5] = { 5, 8, 3, 66, 7 };
-
-	//адреси йдуть по наростаючій
-
-	int* p1 = &mas[2]; //3
-
-	cout << *p1 << endl;
-	cout << p1[0] << endl;
-	cout << p1[1] << endl;
-	cout << p1[2] << endl;
-	cout << p1[-1] << endl;
-	cout << p1[-2] << endl;
-
-	
+	const int& ra2 = a;
+	// ra2 = 77; заборонено
 
 	return 0;
 };
