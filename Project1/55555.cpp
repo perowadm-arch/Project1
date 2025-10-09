@@ -3,27 +3,31 @@
 using namespace std;
 
 int main() {
-	//посиоання reference
-	// тип & назва = ініціалізація;
-	// референс - "друге ім'я" (константний показчик)
-	// *p <==> ra
-	// const тип & назва = ініціалізація;
+	const int n = 5;
+	int mas[n] = { 5, 3, 7, 2, 4 };
 
-	int a = 90;
-	int& ra = a; // <==> int* const pra = &a;
-	cout << ra << endl;
-	cout << a << endl;
-	ra = 100;
-	cout << ra << endl;
-	cout << a << endl;
-	int* const pra = &a;
-	*pra = 123;
-	cout << ra << endl;
-	cout << a << endl;
-	cout << *pra << endl;
+	for (int i = 0; i < n; i++) {
+		cout << mas[i] << "  " << endl;
+	}
+	cout << endl;
 
-	const int& ra2 = a;
-	// ra2 = 77; заборонено
+	int* pmin = mas; // &mas[0];
+	int* pmax = mas;
+
+	for (int i = 1; i < n; i++) {
+		if (mas[i] < *pmin) {
+			pmin = &mas[i]; // OR mas + i
+
+		}
+
+		if (mas[i] > *pmax) {
+			pmax = &mas[i]; // OR mas + i
+
+		}
+	};
+
+	cout << *pmin << " " << *pmax << endl;
+
 
 	return 0;
 };
