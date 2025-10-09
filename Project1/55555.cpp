@@ -10,34 +10,15 @@ int main() {
 
 	//адреса + адреса - не існує
 
-	int a = 8;
-	int* ptr = &a;
-	cout << ptr << endl;
-	cout << &a << endl;
-	cout << ptr + 1 << endl;
-	cout << ptr + 2 << endl;
-	cout << ptr - 1 << endl;
-	cout << ptr - 2 << endl;
+	
 
+	int mas[5] = { 5, 8, 3, 66, 7 };
 
-	cout << "  " << endl;
+	for (int i = 0; i < 5; i++) {
+		cout << mas + i << "\t" << &mas[i] << "\t" << mas[i] << endl;
+	}
 
-	double b = 8;
-	double* pth = &b;
-	cout << pth << endl;
-	cout << &b << endl;
-	cout << pth + 1 << endl;
-
-	cout << "  " << endl;
-
-	double d = 8;
-	double* ptb = &d;
-	cout << ptb << endl;
-	cout << &d << endl;
-	cout << ptb + 1 << endl;
-	cout << ptb + 2 << endl;
-	cout << ptb - 3 << endl;
-
+	//в int крок +1 завжди 4
 
 	return 0;
 };
