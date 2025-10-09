@@ -18,6 +18,13 @@ int main() {
 		cout << mas + i << "\t" << &mas[i] << "\t" << mas[i] << endl;
 	}
 
+	cout << endl;
+
+	for (int i = 0; i < 5; i++) {
+		cout << *(mas + i) << "\t" << mas[i] << endl;
+		//тотожність для масивів
+	}
+
 	//в int крок +1 завжди 4
 
 	return 0;
