@@ -3,33 +3,51 @@
 using namespace std;
 
 int main() {
-	int a = 7;
-	int b = 1;
-	int c = 4;
-	int mas[3] = { 5, 77, 2 };
+	 
+	const int n = 10;
+	int mas[n];
 
-	int* pmas[6]; //"записна книжка" - записує адреси всіх елементів
-	pmas[0] = &a;
-	pmas[1] = &b;
-	pmas[2] = &c;
-	pmas[3] = mas;
-	pmas[4] = mas + 1;
-	pmas[5] = &mas[2];
-
-	for (int i = 0; i < 6; i++) {
-		cout << *pmas[i] << " ";
+	for (int i = 0; i < n; i++) {
+		mas[i] = rand() % 100;
 	}
 
-	cout << endl;
+	int* pmas[n];
 
-	for (int i = 0; i < 6; i++) {
-		*pmas[i] += 100;
+	for (int i = 0; i < n; i++) {
+		pmas[i] = mas + i; //&mas[i]
 	}
-	cout << a << " " << b << " " << c << endl;
 
-	for (int i = 0; i < 3; i++) {
+	for (int i = 0; i < n; i++) {
 		cout << mas[i] << " ";
 	}
+	cout << endl;
+
+	for (int i = 0; i < n; i++) {
+		cout << *pmas[i] << " ";
+	}
+	cout << endl;
+
+	//bulbashka
+
+	for (int k = 0; k < n-1; k++) {
+		for (int i = 0; i < n-1-k; i++) {
+			if (*pmas[i + 1] < *pmas[i]) {
+				int* c = pmas[i + 1];
+				pmas[i + 1] = pmas[i];
+				pmas[i] = c;
+			}
+		}
+	}
+
+	for (int i = 0; i < n; i++) {
+		cout << mas[i] << " ";
+	}
+	cout << endl;
+
+	for (int i = 0; i < n; i++) {
+		cout << *pmas[i] << " ";
+	}
+	cout << endl;
 
 
 	return 0;
