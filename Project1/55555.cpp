@@ -3,42 +3,34 @@
 using namespace std;
 
 int main() {
-	const int n = 5;
-	int mas[n] = { 5, 3, 7, 2, 4 };
+	int a = 7;
+	int b = 1;
+	int c = 4;
+	int mas[3] = { 5, 77, 2 };
 
-	for (int i = 0; i < n; i++) {
-		cout << mas[i] << "  " << endl;
+	int* pmas[6]; //"записна книжка" - записуЇ адреси вс≥х елемент≥в
+	pmas[0] = &a;
+	pmas[1] = &b;
+	pmas[2] = &c;
+	pmas[3] = mas;
+	pmas[4] = mas + 1;
+	pmas[5] = &mas[2];
+
+	for (int i = 0; i < 6; i++) {
+		cout << *pmas[i] << " ";
 	}
-	cout << endl;
-
-	int* pmin = mas; // &mas[0];
-	int* pmax = mas;
-
-	for (int i = 1; i < n; i++) {
-		if (mas[i] < *pmin) {
-			pmin = &mas[i]; // OR mas + i
-
-		}
-
-		if (mas[i] > *pmax) {
-			pmax = &mas[i]; // OR mas + i
-
-		}
-	};
-
-	cout << *pmin << " " << *pmax << endl;
-
-	int c = *pmin;
-	*pmin = *pmax;
-	*pmax = c;
-	//ми пом≥н€ли максимум ≥ м≥н≥мум м≥сц€ми
 
 	cout << endl;
 
-	for (int i = 0; i < n; i++) {
-		cout << mas[i] << "  " << endl;
+	for (int i = 0; i < 6; i++) {
+		*pmas[i] += 100;
 	}
-	cout << endl;
+	cout << a << " " << b << " " << c << endl;
+
+	for (int i = 0; i < 3; i++) {
+		cout << mas[i] << " ";
+	}
+
 
 	return 0;
 };
