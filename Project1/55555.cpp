@@ -26,6 +26,8 @@ int main() {
 
 	cout << endl;
 
+	int masmin[n];
+
 	for (int i = 0; i < n; i++) {
 		int min = matr[i][0];
 		
@@ -34,10 +36,23 @@ int main() {
 				min = matr[i][k];
 			}
 		}
-		cout << min << "\t";
+		//cout << min << "\t";
+		masmin[i] = min;
 	}
 
+	for (int i = 0; i < n; i++) {
+		cout << masmin[i] << "\t";
+	}
 
+	int max = masmin[0];
+
+	for (int i = 0; i < n; i++) {
+		if (masmin[i] > max) {
+			max = masmin[i];
+		}
+	}
+
+	cout << endl << max << endl;
 
 	return 0;
 };
