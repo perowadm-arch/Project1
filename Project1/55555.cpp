@@ -26,6 +26,8 @@ int main() {
 
 	int sum = 0;
 	int neg = 0;
+	int min = matr[0][0];
+	int max = matr[0][0];
 
 
 	for (int i = 0; i < n; i++) {
@@ -37,11 +39,21 @@ int main() {
 				neg++;
 			}
 
+			if (matr[i][k] > max) {
+				max = matr[i][k];
+			}
+
+			if (matr[i][k] < min) {
+				min = matr[i][k];
+			}
+
 		}
 	}
 
 	cout << endl << sum << endl;
 	cout << endl << neg << endl;
+	cout << endl << max << endl;
+	cout << endl << min << endl;
 
 	return 0;
 };
