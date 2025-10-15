@@ -24,36 +24,20 @@ int main() {
 		cout << endl;
 	}
 
-	int sum = 0;
-	int neg = 0;
-	int min = matr[0][0];
-	int max = matr[0][0];
-
+	cout << endl;
 
 	for (int i = 0; i < n; i++) {
+		int min = matr[i][0];
+		
 		for (int k = 0; k < m; k++) {
-
-			sum += matr[i][k];
-
-			if (matr[i][k] < 0) {
-				neg++;
-			}
-
-			if (matr[i][k] > max) {
-				max = matr[i][k];
-			}
-
 			if (matr[i][k] < min) {
 				min = matr[i][k];
 			}
-
 		}
+		cout << min << "\t";
 	}
 
-	cout << endl << sum << endl;
-	cout << endl << neg << endl;
-	cout << endl << max << endl;
-	cout << endl << min << endl;
+
 
 	return 0;
 };
