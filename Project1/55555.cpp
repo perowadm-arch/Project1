@@ -3,56 +3,50 @@ using namespace std;
 
 int main() {
 	 
-	//багатовим≥рний масив - матриц€ matr[n] [m]
-	//елемент масиву matr[i] [j]
+	//квадратна матриц€ - коли стовпчики = р€дки
+	//ознака що елемент на головн≥й д≥агонал≥ - matr[i][i]
 
-	const int n = 2;
-	const int m = 3;
-	
-	int matr[n][m];
+	const int n = 7;
+	int matr[n][n];
 
 	for (int i = 0; i < n; i++) {
-		for (int k = 0; k < m; k++) {
-			matr[i][k] = rand() % 20 -10;
+		for (int k = 0; k < n; k++) {
+			matr[i][k] = rand() % 200 - 100;
 		}
 	}
 
+
 	for (int i = 0; i < n; i++) {
-		for (int k = 0; k < m; k++) {
-			cout << matr[i][k] <<"\t";
+		for (int k = 0; k < n; k++) {
+			cout << matr[i][k] << "\t";
 		}
 		cout << endl;
 	}
 
-	cout << endl;
+	cout << endl << endl;
 
-	int masmin[n];
-
-	for (int i = 0; i < n; i++) {
-		int min = matr[i][0];
-		
-		for (int k = 0; k < m; k++) {
-			if (matr[i][k] < min) {
-				min = matr[i][k];
-			}
-		}
-		//cout << min << "\t";
-		masmin[i] = min;
-	}
 
 	for (int i = 0; i < n; i++) {
-		cout << masmin[i] << "\t";
+		//for (int k = 0; k < n; k++) {
+		//	if (i == k) {
+		//		cout << matr[i][k] << "\t";
+		//	}
+		//} - дуже багато необов'€зкових перев≥рок
+
+		cout << matr[i][i] << "\t";
 	}
 
-	int max = masmin[0];
+	int* pmin = &matr[0][0];
+	int* pmax = &matr[0][0];
 
-	for (int i = 0; i < n; i++) {
-		if (masmin[i] > max) {
-			max = masmin[i];
-		}
+	for (int i = 0; i < n; ++i) {
+		if (matr[i][i] < *pmin) pmin = &matr[i][i];
+		if (matr[i][i] > *pmax) pmax = &matr[i][i];
 	}
 
-	cout << endl << max << endl;
+	cout << endl << *pmin << "\t" << *pmax << endl;
+	cout << "index min = " << pmin - matr[0] << endl;
+	cout << "index max = " << pmax - matr[0] << endl;
 
 	return 0;
 };
