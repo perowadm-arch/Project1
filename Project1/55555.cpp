@@ -23,28 +23,30 @@ int main() {
 		cout << endl;
 	}
 
-	int c = 0; 
-	for (int i = 0; i < n-1; i++) {
-		for (int k = i+1; k < n; k++) { //к-ість neпарних елем вище головної діаг
-			//matr[i][k] = 0;
-			if (matr[i][k] % 2 != 0) {
-				++c;
-			}
-		}
-	}
-
-	cout << endl << c << endl;
+	//int c = 0; 
 	
-	int min = 1; //пошук мінімального елемента
-	for (int i = 1; i < n; i++) {
-		for (int k = 0; k < i; k++) { //все під головною діагоналлю
-			//matr[i][k] = 1;
-
-			if (matr[i][k] < min) {
-				min = matr[i][k];
-			}
+	for (int i = 0; i < n-1; i++) {
+		for (int k = 0; k < n-1-i; k++) { //к-ість neпарних елем вище головної діаг
+			matr[i][k] = 0;
+		
+			//if (matr[i][k] % 2 != 0) {
+			//	++c;
+			//}
 		}
 	}
+
+	//cout << endl << c << endl;
+	
+	//int min = 1; //пошук мінімального елемента
+	//for (int i = 1; i < n; i++) {
+	//	for (int k = 0; k < i; k++) { //все під головною діагоналлю
+	//		//matr[i][k] = 1;
+
+	//		if (matr[i][k] < min) {
+	//			min = matr[i][k];
+	//		}
+	//	}
+	//}
 
 	cout << endl;
 
@@ -56,7 +58,7 @@ int main() {
 		cout << endl;
 	}
 
-	cout << endl << min;
+	//cout << endl << min;
 
 
 	return 0;
