@@ -23,12 +23,17 @@ int main() {
 		cout << endl;
 	}
 
+	int c = 0;
 	for (int i = 0; i < n-1; i++) {
 		for (int k = i+1; k < n; k++) { //к-ість парних елем вище головної діаг
-			matr[i][k] = 0;
-
+			//matr[i][k] = 0;
+			if (matr[i][k] % 2 != 0) {
+				++c;
+			}
 		}
 	}
+
+	cout << endl << c << endl;
 	
 	for (int i = 1; i < n; i++) {
 		for (int k = 0; k < i; k++) { //все під головною діагоналлю
@@ -36,7 +41,7 @@ int main() {
 		}
 	}
 
-	cout << endl << endl;
+	cout << endl;
 
 
 	for (int i = 0; i < n; i++) {
