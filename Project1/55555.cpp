@@ -23,9 +23,10 @@ int main() {
 		cout << endl;
 	}
 
-	for (int i = 0; i < n; i++) {
-		for (int k = i; k < n; k++) { //все разом з головною діагоналлю
+	for (int i = 0; i < n-1; i++) {
+		for (int k = i+1; k < n; k++) { //к-ість парних елем вище головної діаг
 			matr[i][k] = 0;
+
 		}
 	}
 	
@@ -47,4 +48,4 @@ int main() {
 
 
 	return 0;
-};
+}
