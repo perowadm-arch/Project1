@@ -5,31 +5,58 @@ int main() {
 
 	const int n = 4;
 	const int m = 5;
-	int matr[n][m];
+	const int k = 6;
+	int mas3d[n][m][k];
+
+	//for (int i = 0; i < n; i++) {
+	//	for (int k = 0; k < m; k++) {
+	//		matr[i][k] = rand() % 200 - 100 + 1;
+	//	}
+	//}
+
+
+	//for (int i = 0; i < n; i++) {
+	//	for (int k = 0; k < m; k++) {
+	//		cout << matr[i][k] << "\t";
+	//	}
+	//	cout << endl;
+	//}
+
+	//cout << endl;
+
+	//int* mas;
+
+	//mas = &matr[0][0];  //matr[0]
+
+	//for (int i = 0; i < n * m; i++) {
+	//	cout << mas[i] << " ";
+	//}
+
+	//cout << endl << endl;
+
+	//for (int i = 0; i < n; i++) {
+	//	for (int k = 0; k < m; k++) {
+	//		cout << mas[i*m+k] << "\t";
+	//	}
+	//	cout << endl;
+	//}
 
 	for (int i = 0; i < n; i++) {
-		for (int k = 0; k < m; k++) {
-			matr[i][k] = rand() % 200 - 100 + 1;
+		for (int ii = 0; ii < m; ii++) {
+			for (int iii = 0; iii < k; iii++) {
+				mas3d[i][ii][iii] = rand() % 201 - 100 + 1;
+			}
 		}
 	}
 
-
-	for (int i = 0; i < n; i++) {
-		for (int k = 0; k < m; k++) {
-			cout << matr[i][k] << "\t";
+	for (int i = 0; i < n; i++, cout << endl) {
+		for (int ii = 0; ii < m; ii++, cout << endl) {
+			for (int iii = 0; iii < k; iii++) {
+				cout << mas3d[i][ii][iii] << " ";
+			}
 		}
-		cout << endl;
 	}
 
-	cout << endl;
-
-	for (int i = 0; i < n; i++) {
-		cout << matr[i][0] << " " << &matr[i][0] << " " << matr[i] << " " << *matr[i] << endl;
-	}//адреси кожного елементу стовпц€
-
-	cout << endl << matr[1] + 2 << " " << *(matr[1] + 2) << " " << matr[1][2] << " " << & matr[1][2] << endl;
-
-	// matr[i][k] <==> *(matr[i] + k) <==> *(*(matr + i) + k) - формула екв≥валентност≥
 
 	return 0;
 };
