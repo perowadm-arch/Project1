@@ -3,59 +3,43 @@ using namespace std;
 
 int main() {
 
-	const int n = 4;
-	const int m = 5;
-	const int k = 6;
-	int mas3d[n][m][k];
+	// void* malloc(size_t size) виділення динамічної пам'яті
+	// size_t - unsigned int; size - к-ість пам'яті в байтах;
+	 
+	// void* calloc(size_t num, size_t size) - виділ. динамічної пам'яті
+	// num - к-ість блоків; size - розмір блоку у байтах;
+	 
+	// void* realloc(void* ptr, size_t size) - перевиділення динам пам'яті
+	// ptr - показчик на попередню виділену пам'ять; size - розмір блоку в байтах
+	 
+	// unsigned int - число без знаків (тобто без -)
 
-	//for (int i = 0; i < n; i++) {
-	//	for (int k = 0; k < m; k++) {
-	//		matr[i][k] = rand() % 200 - 100 + 1;
-	//	}
-	//}
+	// void free(void* ptr); ptr - показчик, який зберігає адресу виділеної динам пам'яті
+
+	//ТИП* prt1 = new ТИП;
+	//ТИП* prt2 = new ТИП(значення);
+	//ТИП* mas = new ТИП[кількість елементів];
+	//виділення динамічної пам’яті
+
+	//delete ptr1;
+	//delete[]mas;
+	//звільнення динамічної пам’яті
+
+	//ТИП* ІМЯ = (ТИП*)malloc(sizeof(ТИП)*n);
+	//free(ІМЯ);
+
+	double* b = (double*)malloc(sizeof(double));
+
+	*b = 2.6;
+	cout << *b << endl;
+
+	free(b);
 
 
-	//for (int i = 0; i < n; i++) {
-	//	for (int k = 0; k < m; k++) {
-	//		cout << matr[i][k] << "\t";
-	//	}
-	//	cout << endl;
-	//}
 
-	//cout << endl;
 
-	//int* mas;
 
-	//mas = &matr[0][0];  //matr[0]
 
-	//for (int i = 0; i < n * m; i++) {
-	//	cout << mas[i] << " ";
-	//}
-
-	//cout << endl << endl;
-
-	//for (int i = 0; i < n; i++) {
-	//	for (int k = 0; k < m; k++) {
-	//		cout << mas[i*m+k] << "\t";
-	//	}
-	//	cout << endl;
-	//}
-
-	for (int i = 0; i < n; i++) {
-		for (int ii = 0; ii < m; ii++) {
-			for (int iii = 0; iii < k; iii++) {
-				mas3d[i][ii][iii] = rand() % 201 - 100 + 1;
-			}
-		}
-	}
-
-	for (int i = 0; i < n; i++, cout << endl) {
-		for (int ii = 0; ii < m; ii++, cout << endl) {
-			for (int iii = 0; iii < k; iii++) {
-				cout << mas3d[i][ii][iii] << " ";
-			}
-		}
-	}
 
 
 	return 0;
