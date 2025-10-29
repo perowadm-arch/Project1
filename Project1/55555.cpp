@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 int main() {
@@ -29,21 +30,21 @@ int main() {
 	//free(≤ћя);
 
 
-	//int n;
-	//cout << "enter the number of rows: ";
-	//cin >> n;
+	int n;
+	cout << "enter the number of rows: ";
+	cin >> n;
 
-	////int* mas = (int*)malloc(sizeof(int)) * n; //створенн€ динам≥чного масиву
-	//
-	//for (int i = 0; i < n; i++) {
-	//	mas[i] = rand() % 10000 / 10;
-	//}
-	//
-	//for (int i = 0; i < n; i++) {
-	//	cout << mas[i] << "";
-	//}
+	int* mas = (int*)malloc(sizeof(int)*n); //створенн€ динам≥чного масиву
+	
+	for (int i = 0; i < n; i++) {
+		mas[i] = rand() % 10000 / 10;
+	}
+	
+	for (int i = 0; i < n; i++) {
+		cout << mas[i] << "";
+	}
 
-	//free(mas);
+	free(mas);
 	
 
 
