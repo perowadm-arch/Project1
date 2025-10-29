@@ -21,12 +21,16 @@ int main() {
 			return 1;
 		}
 
+		//друга схема
+
 		double** matr;
 		matr = new double* [n];
 		//int** matr = new int* [n];
 
-		for (int i = 0; i < n; i++) {
-			matr[i] = new double[m];
+		matr[0] = new double[n * m];
+
+		for (int i = 1; i < n; ++i) {
+			matr[i] = matr[0]+i*m;
 		}
 		
 	//створення динамічного масиву показчиків для зберігання двохвимірної матриці
@@ -71,10 +75,9 @@ int main() {
 
 
 
-		for (int i = 0; i < n; ++i) {
-			delete[]matr[i];
-		}
-
+		
+	
+		delete[]matr[0];
 		delete[]matr;
 
 
