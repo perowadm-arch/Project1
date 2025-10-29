@@ -47,17 +47,15 @@ int main() {
 		//сортування стовпчика
 
 		int index = 4;
-		if (index <= 0 || index >= m) {
-			cout << "invalid index";
-			return 2;
-		}
-
-		for (int k = 0; k < n - 1; k++) {
-			for (int i = 0; i < n-1-k; i++) {
-				if (matr[i + 1][index] < matr[i][index]) {
-					double c = matr[i + 1][index];
-					matr[i + 1][index] = matr[i][index];
-					matr[i][index] = c;
+		for (int index = 0; index < m; index++) {
+			
+			for (int k = 0; k < n - 1; k++) {
+				for (int i = 0; i < n - 1 - k; i++) {
+					if (matr[i + 1][index] < matr[i][index]) {
+						double c = matr[i + 1][index];
+						matr[i + 1][index] = matr[i][index];
+						matr[i][index] = c;
+					}
 				}
 			}
 		}
