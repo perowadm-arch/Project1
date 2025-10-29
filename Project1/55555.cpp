@@ -28,12 +28,23 @@ int main() {
 	//ТИП* ІМЯ = (ТИП*)malloc(sizeof(ТИП)*n);
 	//free(ІМЯ);
 
-	double* b = (double*)malloc(sizeof(double));
 
-	*b = 2.6;
-	cout << *b << endl;
+	//int n;
+	//cout << "enter the number of rows: ";
+	//cin >> n;
 
-	free(b);
+	////int* mas = (int*)malloc(sizeof(int)) * n; //створення динамічного масиву
+	//
+	//for (int i = 0; i < n; i++) {
+	//	mas[i] = rand() % 10000 / 10;
+	//}
+	//
+	//for (int i = 0; i < n; i++) {
+	//	cout << mas[i] << "";
+	//}
+
+	//free(mas);
+	
 
 
 
