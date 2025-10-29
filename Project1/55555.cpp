@@ -31,6 +31,20 @@ int main() {
 		
 	//створення динамічного масиву показчиків для зберігання двохвимірної матриці
 
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				matr[i][j] = rand() % 10000 / 100.0;
+			}
+		}
+
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				cout<< matr[i][j] << " ";
+			}
+			cout << endl;
+		}
+
+
 
 	return 0;
 };
