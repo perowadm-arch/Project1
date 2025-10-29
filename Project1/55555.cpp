@@ -6,59 +6,67 @@ int main() {
 
 	int n;
 	int m;
+	int w;
 	do {
 		cout << "enter n>0: " << endl;
 		cin >> n;
 
-	
 		cout << "enter m>0: " << endl;
 		cin >> m;
 
-	} while (n <= 0 || m <= 0);
+		cout << "enter w>0: " << endl;
+		cin >> w;
 
-		if (n <= 0 || m <= 0) {
-			cout << "invalid input" << endl;
-			return 1;
-		}
+	} while (n <= 0 || m <= 0 || w <= 0);
+
+
 
 		//друга схема
 
-		double** matr;
-		matr = new double* [n];
+		double*** matr;
+		matr = new double** [n];
 		//int** matr = new int* [n];
 
-		matr[0] = new double[n * m];
 
-		for (int i = 1; i < n; ++i) {
-			matr[i] = matr[0]+i*m;
+		for (int i = 0; i < n; ++i) {
+			matr[i] = new double*[m];
+			for (int k = 0; k < m; ++k) {
+				matr[i][k] = new double[w];
+			}
 		}
 		
 	//створення динамічного масиву показчиків для зберігання двохвимірної матриці
 
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
-				matr[i][j] = rand() % 10000 / 100.0;
+				for (int k = 0; k < w; ++k) {
+					matr[i][j][k] = rand() % 10000 / 100.0;
+				}
 			}
 		}
 
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
-				cout<< matr[i][j] << "\t";
+				for (int k = 0; k < w; ++k) {
+					cout << matr[i][j][k] << "\t";
+				}
+				cout << endl;
 			}
 			cout << endl;
 		}
 
 		//сортування стовпчика
 
-		int index = 4;
+		int index2 = 2;
+
 		for (int index = 0; index < m; index++) {
 			
 			for (int k = 0; k < n - 1; k++) {
 				for (int i = 0; i < n - 1 - k; i++) {
-					if (matr[i + 1][index] < matr[i][index]) {
-						double c = matr[i + 1][index];
-						matr[i + 1][index] = matr[i][index];
-						matr[i][index] = c;
+					if (matr[i + 1][index][index2] < matr[i][index][index2]) {
+						double c = matr[i + 1][index][index2];
+						matr[i + 1][index][index2] = matr[i][index][index2];
+						matr[i][index][index2] = c;
 					}
 				}
 			}
@@ -68,7 +76,10 @@ int main() {
 
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
-				cout << matr[i][j] << "\t";
+				for (int k = 0; k < w; ++k) {
+					cout << matr[i][j][k] << "\t";
+				}
+				cout << endl;
 			}
 			cout << endl;
 		}
@@ -77,7 +88,15 @@ int main() {
 
 		
 	
-		delete[]matr[0];
+		
+
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
+				delete []matr[i][j];
+			}
+			delete []matr[i];
+		}
+
 		delete[]matr;
 
 
