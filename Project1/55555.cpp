@@ -34,17 +34,20 @@ int main() {
 	cout << "enter the number of rows: ";
 	cin >> n;
 
-	int* mas = (int*)malloc(sizeof(int)*n); //створення динамічного масиву
+//	int* mas = (int*)malloc(sizeof(int)*n); //створення динамічного масиву
 	
+	double* mas = new double[n];
+
 	for (int i = 0; i < n; i++) {
-		mas[i] = rand() % 10000 / 10;
+		mas[i] = rand() % 10000 / 100.0;
 	}
 	
 	for (int i = 0; i < n; i++) {
-		cout << mas[i] << "";
+		cout << mas[i] << " ";
 	}
 
-	free(mas);
+	//free(mas);
+	delete[]mas;
 	
 
 
