@@ -1,18 +1,24 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <stdlib.h>
+#include <string.h>
 using namespace std;
 
 int main() {
 
 	char str[] = "Michael, don't leave me here!";
 	
-	cout << str << endl;
-	str[7] = 0;
-	cout << str << endl;
-	cout << str[9] << endl;
-	cout << &str[9] << endl; // & - ג³העגמנ‏÷ גסו ן³סכÿ צüמדמ סטלגמכף
-	cout << str + 9 << endl;
+	int len = 0;
+
+	for (int i = 0; str[i] != '\0'; i++) {
+		++len;
+	}
+
+	cout << len << endl;
+
+	len = strlen(str);
+
+	cout << len << endl;
 
 	return 0;
 };
