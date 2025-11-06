@@ -1,23 +1,22 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <stdlib.h>
 using namespace std;
 
 int main() {
 
-	char ch = 65;
-	printf("%c\n", ch);
-	printf("%d\n", ch);
+	char str[100];
+	char str1[100];
+	char str2[100];
 
-	cout << ch << endl;
-	cout << (int)ch << endl;
+	cin >> str;
+	cin >> str1;
+	cin >> str2;
 
-	cout << endl;
+	printf("%s\n\n", str);
+	printf("%s\n\n", str1);
+	printf("%s\n\n", str2);
 
-	//друкування повної таблиці ANSCII
-	for (int c = 0; c <= 255; ++c){
-			unsigned char ch = c;
-			printf("Code: %d\t Value: %c\n", ch, ch);
-	}
 
 	return 0;
 };
