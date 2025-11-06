@@ -5,15 +5,13 @@ using namespace std;
 
 int main() {
 
-	char str[100];
-	char str1[100];
-
-	cin >> str; //ц€ ф забере перше слово до проб≥лу,
-	//а гетлайн забере залишок з буферу
-	cin.getline(str1, 99); //fgets(str,99,stdin);
-
+	char str[] = "Help me please";
+	
 	cout << str << endl;
-	cout << str1 << endl;
+	str[7] = 0;
+	cout << str << endl;
+	cout << str[8] << endl;
+	cout << &str[8] << endl; // & - в≥дтворюЇ все п≥сл€ цього символу
 
 	return 0;
 };
