@@ -15,5 +15,12 @@ int main() {
 		int bal;
 	}ivan = { "Ivanov", 90};
 
+	Tpoint dasha = { "Perova" , 78 };
+
+	Tpoint maxim;
+
+	maxim.bal = 90;
+	strcpy(maxim.pib, "Andreev");
+
 	return 0;
 };
