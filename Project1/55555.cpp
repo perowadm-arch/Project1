@@ -3,24 +3,28 @@
 
 using namespace std;
 
+struct Tpoint2 { //глобальний тип
+	int x;
+	int y;
+};
+
 int main() {
 
-	struct Tpoint2 {
-		int x;
-		int y;
-	}p1,p2 = {10, 30};
+	
 
-	struct Tpoint {
+	Tpoint2 p1 = { 32, 5 };
+
+	struct Tpoint {  //локальний тип
 		char pib[30];
 		int bal;
 	}ivan = { "Ivanov", 90};
 
 	Tpoint dasha = { "Perova" , 78 };
 
-	Tpoint maxim;
+	Tpoint bogdan;
 
-	maxim.bal = 90;
-	strcpy(maxim.pib, "Andreev");
+	bogdan.bal = 90;
+	strcpy(bogdan.pib, "Andreev");
 
 	return 0;
 };
