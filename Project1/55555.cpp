@@ -1,30 +1,50 @@
-
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 
 using namespace std;
 
-struct Tpoint2 { //глобальний тип
-	int x;
-	int y;
+struct T { //глобальний тип
+	int num;
+	char name[100];
+	T* next;
 };
 
 int main() {
 
-	
+	T a, b, c;
 
-	Tpoint2 p1 = { 32, 5 };
+	a.num = 1;
+	strcpy(a.name, "A");
 
-	struct Tpoint {  //локальний тип
-		char pib[30];
-		int bal;
-	}ivan = { "Ivanov", 90};
+	b.num = 2;
+	strcpy(b.name, "B");
 
-	Tpoint dasha = { "Perova" , 78 };
+	c.num = 3;
+	strcpy(c.name, "C");
 
-	Tpoint bogdan;
+	a.next = &b;
+	b.next = &c;
+	c.next = &a;
 
-	bogdan.bal = 90;
-	strcpy(bogdan.pib, "Andreev");
+	T* pcur = &a;
+	cout << pcur->name << " " << pcur->num << endl; //a
+	pcur = pcur->next; //b
+	cout << pcur->name << " " << pcur->num << endl;
+	pcur = pcur->next; //c
+	cout << pcur->name << " " << pcur->num << endl;
+
+	cout << "---------------------------" << endl;
+
+	pcur = &a;
+
+	srand(time(NULL));
+	int n = rand() % 10;
+
+	for (int i = 0; i < n; i++) {
+		pcur = pcur->next;
+	}
+
+	cout << pcur->name << " " << pcur->num << endl;
 
 	return 0;
 };
